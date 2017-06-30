@@ -105,6 +105,26 @@ public class BinaryTree {
 
 		}
 		
+		//Retorna o valor procurado
 		return focusNode;
 	}
+	
+	//Percurso em ordem
+	public void inOrder(Node focusNode){
+		
+		if (focusNode != null) {
+			
+			//Visita recursivamente o nó da esquerda
+			inOrder(focusNode.getLeftChild());
+			
+			//Visita a raiz
+			System.out.println(focusNode);
+			
+			//Visito recursivamente o nó da direita
+			inOrder(focusNode.getRightChild());
+			
+		}
+		
+	}
+	
 }
